@@ -2,6 +2,15 @@
 var tableData = data;
 
 // YOUR CODE HERE!
+//Render table at the start
+var tbody = d3.select("tbody");
+tableData.forEach((UFOsighting) => {
+  var row = tbody.append("tr");
+  Object.entries(UFOsighting).forEach(([key, value]) => {
+    var cell = row.append("td");
+    cell.text(value);
+  });
+});
 
 //Select the button and form
 var button = d3.select("button")
